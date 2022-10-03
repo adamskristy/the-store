@@ -5,7 +5,7 @@ const express = require('express')
 const router = express.Router()
 
 // Loading our Model of logs
-const Log = require('../models/product')
+const Product = require('../models/product')
 
 // Bring in seed data
 const seed = require('../models/seed')

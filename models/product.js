@@ -7,11 +7,12 @@ const Schema = mongoose.Schema
 
 // create our Schema
 const productSchema = new Schema({
-    title: { type: String, required: true }, 
-    entry: { type: String, required: true },
-    price: { type: String, required: true },
-    quantity: {type: Number, min:0, max: 25, required: true },
-    inStock: Boolean
+    name: { type: String, required: true },
+    image: { type: String, required: true }, 
+    price: { type: String, required: true }, 
+    descr: { type: String, required: true },
+    qty: {type: Number, required: true },
+    inStock: Boolean,
 })
 
 // create a Model from our Schema

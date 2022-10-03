@@ -12,7 +12,7 @@ const findAllProducts = (req, res) => {
         if (err) {
             res.status(400).json(err)
         } else {
-            res.status(200).render('Index', { product: foundProduct })
+            res.status(200).render('Index', { products: foundProduct })
         }
     })
 }
@@ -37,15 +37,15 @@ const deleteOneProduct = (req, res) => {
 
 // ROUTE     PUT /products/:id       (update)
 const updateOneProduct = (req, res) => {
-    console.product(req.body)
-    if (req.body.shipIsBroken === "on" || req.body.shipIsBroken === true ) {
-        req.body.shipIsBroken = true
+    console.log(req.body)
+    if (req.body.inStock === "on" || req.body.inStock === true ) {
+        req.body.inStock = true
     } else {
-        req.body.shipIsBroken = false
+        req.body.inStock = false
     }
 
     Product.findByIdAndUpdate(req.params.id, req.body, (err, foundProduct) => {
-        console.product(req.body)
+        console.log(req.body)
         if (err) {
             res.status(400).json(err)
         } else {
@@ -56,19 +56,18 @@ const updateOneProduct = (req, res) => {
 
 // ROUTE     POST /products     (create)
 const createNewProduct = (req, res) => {
-    if (req.body.shipIsBroken === "on") {
-        req.body.shipIsBroken = true
+    if (req.body.inStock === "on") {
+        req.body.inStock = true
     } else {
-        req.body.shipIsBroken = false
+        req.body.inStock = false
     }
    
     Product.create(req.body, (err, createdProduct) => {
-        console.product(req.body)
+        console.log(req.body)
         if (err) {
             res.status(400).json(err)
         } else {
             res.status(200).redirect('/products')
-            // res.status(200).redirect(`/products/${req.params.id}`)
         }
     })
 }
@@ -80,7 +79,7 @@ const showEditView = (req, res) => {
         if (err) {
             res.status(400).json(err)
         } else {
-            res.status(200).render('Edit', { product: foundProduct })
+            res.status(200).render('Edit', { products: foundProduct })
         }
     })
 }
@@ -94,8 +93,8 @@ const seedStarterData = (req, res) => {
         if (err) {
             res.status(400).json(err)
         } else {
-            console.product('deleted data.')
-            console.product(seed.products)
+            console.log('deleted data.')
+            console.log(seed.products)
           
             Product.create(seed.products, (err, createdProduct) => {
                 if (err) {
@@ -123,10 +122,11 @@ const clearProductData = (req, res) => {
 const showOneProduct = (req, res) => {
 
     Product.findById(req.params.id, (err, foundProduct) => {
+        console.log(req.params.id)
         if (err) {
             res.status(400).json(err)
         } else {
-            res.status(200).render('Show', { product: foundProduct })
+            res.status(200).render('Show', { products: foundProduct })
         }
     })
 }
