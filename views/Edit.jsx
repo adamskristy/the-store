@@ -10,7 +10,7 @@ class Edit extends React.Component {
             <DefaultLayout>
                 <div>
                     <h1>Edit Product</h1>
-                    <form action="" method="POST">
+                    <form action={`/products/${products._id}?_method=PUT`} method="POST">
                         <fieldset>
                             <p>
                                 <label htmlFor="name">Product Name:</label>
@@ -32,6 +32,10 @@ class Edit extends React.Component {
                             <p>
                                 <label htmlFor="qty">Quantity:</label>
                                 <input type='number' id='qty' name='qty' defaultValue={products.qty} />
+                            </p>
+                            <p>
+                                <label htmlFor="inStock">In Stock:</label>
+                                <input type='checkbox' id='inStock' name='inStock' defaultChecked={products.inStock} />
                             </p>
 
                             <input type="submit" value="Edit Product"/>

@@ -12,7 +12,8 @@ class Show extends React.Component {
                     <h1>{`${products.name}`}</h1>
                         <p>{products.descr}</p>
                         <p>{products.price}</p>
-                        <h4><p>{products.inStock ? "Not in Stock " : "Currently In Stock  " }</p></h4>
+                        <p>Qty: {products.qty}</p>
+                        <h4><p>{products.inStock ? "Currently In Stock" : "Not in Stock " }</p></h4>
 
                     <div id="show-btns">
                         

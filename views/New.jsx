@@ -33,7 +33,7 @@ class New extends React.Component {
 
                             <p>
                                 <label htmlFor="inStock">In Stock:</label>
-                                <input type='checkbox' id='inStock' name='InStock' />
+                                <input type='checkbox' id='inStock' name='inStock' />
                             </p>
 
                             <input type="submit" value="Submit Product"/>

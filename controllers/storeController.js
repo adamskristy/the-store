@@ -38,7 +38,7 @@ const deleteOneProduct = (req, res) => {
 // ROUTE     PUT /products/:id       (update)
 const updateOneProduct = (req, res) => {
     console.log(req.body)
-    if (req.body.inStock === "on" || req.body.inStock === true ) {
+    if (req.body.inStock === "on") {
         req.body.inStock = true
     } else {
         req.body.inStock = false
@@ -122,7 +122,6 @@ const clearProductData = (req, res) => {
 const showOneProduct = (req, res) => {
 
     Product.findById(req.params.id, (err, foundProduct) => {
-        console.log(req.params.id)
         if (err) {
             res.status(400).json(err)
         } else {

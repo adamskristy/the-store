@@ -8,8 +8,8 @@ const Schema = mongoose.Schema
 // create our Schema
 const productSchema = new Schema({
     name: { type: String, required: true },
-    image: { type: String, required: true }, 
-    price: { type: String, required: true }, 
+    image: { type: String }, 
+    price: { type: Number, required: true }, 
     descr: { type: String, required: true },
     qty: {type: Number, required: true },
     inStock: Boolean,
