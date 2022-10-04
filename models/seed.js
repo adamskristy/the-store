@@ -2,7 +2,7 @@
 const products = [
     {
         name:'Bomb Pop',
-        image: 'image',
+        image: 'https://i.ibb.co/qNg0qm9/bomb-pop.jpg',
         price:'5.99',
         descr:'Bomb pop bath bomb',
         qty:'1',
@@ -10,7 +10,7 @@ const products = [
     },
     {
         name:'Cosmic',
-        image: 'image',
+        image: 'https://i.ibb.co/SRhkYMk/cosmic.jpg',
         price:'5.99',
         descr:'Cosmic bath bomb',
         qty:'1',
@@ -18,23 +18,15 @@ const products = [
     },
     {
         name:'Galaxy',
-        image: 'image',
+        image: 'https://i.ibb.co/m079YZj/galaxy.jpg',
         price:'5.99',
         descr:'Galaxy bath bomb',
         qty:'1',
         inStock: true,
     },
     {
-        name:'Groovy',
-        image: 'image',
-        price:'5.99',
-        descr:'Groovy bath bomb',
-        qty:'1',
-        inStock: true,
-    },
-    {
         name:'Kisses',
-        image: 'image',
+        image: 'https://i.ibb.co/vDRyDQL/kisses.jpg',
         price:'5.99',
         descr:'Kisses bath bomb',
         qty:'1',
@@ -42,7 +34,7 @@ const products = [
     },
     {
         name:'Lavender',
-        image: 'image',
+        image: 'https://i.ibb.co/VqcZNZc/lavender.jpg',
         price:'5.99',
         descr:'Lavender bath bomb',
         qty:'1',
@@ -50,20 +42,12 @@ const products = [
     },
     {
         name:'Blueberry Cream',
-        image: 'image',
+        image: 'https://i.ibb.co/r2zND4n/poseidon.jpg',
         price:'5.99',
         descr:'Blueberry Cream bath bomb',
         qty:'1',
         inStock: true,
-    },
-    {
-        name:'Rose',
-        image: 'image',
-        price:'5.99',
-        descr:'Rose bath bomb',
-        qty:'1',
-        inStock: true,
-    },
+    }
     
 ];
 

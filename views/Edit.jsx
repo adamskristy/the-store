@@ -10,6 +10,8 @@ class Edit extends React.Component {
             <DefaultLayout>
                 <div>
                     <h1>Edit Product</h1>
+
+
                     <form action={`/products/${products._id}?_method=PUT`} method="POST">
                         <fieldset>
                             <p>
@@ -19,7 +21,7 @@ class Edit extends React.Component {
 
                             <p>                           
                                 <label htmlFor="image">Product Image:</label>
-                                <input type='text' id='image' name='image' />
+                                <input type='text' id='image' name='image' defaultValue={products.image} />
                             </p>
                             <p>
                                 <label htmlFor="price">Price:</label>
@@ -41,7 +43,7 @@ class Edit extends React.Component {
                     </form>
 
                     <nav>
-                        <a href ='/products'>Back</a>
+                        <a href ={`/products/${products._id}`}>Back</a>
                     </nav>
                 </div>
             </DefaultLayout>

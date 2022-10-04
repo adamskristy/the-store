@@ -8,21 +8,24 @@ class Index extends React.Component {
 
         return (
             <DefaultLayout title="Sweet Water - All Products">
-                
+                <div id='site-title'>
                     <h1>All Products</h1>
-                    <ul>
-                        {products.map((products)=> {
-                            return (
-                                <li key = {products._id}>
-                                    <a href={`/products/${products._id}`}> {products.name}</a> 
-                                </li>
-                            )
-                        })}
-                    </ul>
+                </div>
                     
-                    <nav>
-                        <a href="/products/new">Create New Product</a>
-                    </nav>
+                        <ul id='products-index' className='index-container'>
+                            {products.map((products)=> {
+                                return (
+                                   
+                                    <li key={products._id} className='products'>
+                                        <img src={products.image} height='200px' />
+                                        <p><a href={`/products/${products._id}`}>{products.name}</a> </p>
+                                        <p>{products.inStock ? "In Stock" : "Out of Stock " }</p>
+                                        <span>{products.price}</span> 
+                                    </li>
+                                    
+                                )
+                            })}
+                        </ul>
                 
             </DefaultLayout>
         )

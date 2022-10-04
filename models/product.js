@@ -12,7 +12,7 @@ const productSchema = new Schema({
     price: { type: Number, required: true }, 
     descr: { type: String, required: true },
     qty: {type: Number, required: true },
-    inStock: Boolean,
+    inStock: { type: Boolean, required: true}
 })
 
 // create a Model from our Schema

@@ -8,13 +8,14 @@ class Show extends React.Component {
         
 
         return (
-            <DefaultLayout title ="Product Details">
+            <DefaultLayout title ="">
                 
                     <h1>{`${products.name}`}</h1>
-                        <p>{products.descr}</p>
+                        <img src={products.image} height='200px' />
+                        <p>Description: {products.descr}</p>
                         <p>{products.price}</p>
                         <p>Qty: {products.qty}</p>
-                        <h4><p>{products.inStock ? "Currently In Stock" : "Not in Stock " }</p></h4>
+                        <h4><p>{products.inStock ? " In Stock" : "Out of Stock " }</p></h4>
                         {products.qty == 0? <button hidden>Buy</button> : <button>Buy</button>}
 
                     <div>
@@ -30,7 +31,7 @@ class Show extends React.Component {
 
 
                     <nav>
-                        <a href ='/products'>Back</a>
+                        <a href ='/products/'>Back</a>
                     </nav>
                </div> 
             </DefaultLayout>
