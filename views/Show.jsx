@@ -4,7 +4,8 @@ const DefaultLayout = require('./layouts/DefaultLayout')
 class Show extends React.Component {
     render() {
 
-        const { products } = this.props
+        const { products } = this.props;
+        
 
         return (
             <DefaultLayout title ="Product Details">
@@ -14,8 +15,9 @@ class Show extends React.Component {
                         <p>{products.price}</p>
                         <p>Qty: {products.qty}</p>
                         <h4><p>{products.inStock ? "Currently In Stock" : "Not in Stock " }</p></h4>
+                        {products.qty == 0? <button hidden>Buy</button> : <button>Buy</button>}
 
-                    <div id="show-btns">
+                    <div>
                         
                         <form action ={`/products/${products._id}/edit`} >
                             <input type="submit" value="Edit" />
@@ -25,6 +27,7 @@ class Show extends React.Component {
                         <form action ={`/products/${products._id}?_method=DELETE`} method="POST">
                             <input type="submit" value="Delete Product" />
                         </form>
+
 
                     <nav>
                         <a href ='/products'>Back</a>

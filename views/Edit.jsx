@@ -31,12 +31,9 @@ class Edit extends React.Component {
                             </p>
                             <p>
                                 <label htmlFor="qty">Quantity:</label>
-                                <input type='number' id='qty' name='qty' defaultValue={products.qty} />
+                                <input type='number' id='qty' name='qty' min= '0' max= '99' defaultValue={products.qty} />
                             </p>
-                            <p>
-                                <label htmlFor="inStock">In Stock:</label>
-                                <input type='checkbox' id='inStock' name='inStock' defaultChecked={products.inStock} />
-                            </p>
+                           
 
                             <input type="submit" value="Edit Product"/>
 

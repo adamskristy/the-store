@@ -21,3 +21,7 @@
   .item:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
+
+  .not-in-stock{
+    display: none;
+  }

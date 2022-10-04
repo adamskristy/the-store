@@ -38,6 +38,12 @@ const deleteOneProduct = (req, res) => {
 // ROUTE     PUT /products/:id       (update)
 const updateOneProduct = (req, res) => {
     console.log(req.body)
+    if(req.body.qty <= 0){
+        req.body.inStock = "off"
+    } else {
+        req.body.inStock = "on"
+    }
+
     if (req.body.inStock === "on") {
         req.body.inStock = true
     } else {
@@ -56,6 +62,12 @@ const updateOneProduct = (req, res) => {
 
 // ROUTE     POST /products     (create)
 const createNewProduct = (req, res) => {
+    if(req.body.qty <= 0){
+        req.body.inStock = "off"
+    } else {
+        req.body.inStock = "on"
+    }
+
     if (req.body.inStock === "on") {
         req.body.inStock = true
     } else {

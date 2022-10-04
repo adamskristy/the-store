@@ -28,13 +28,13 @@ class New extends React.Component {
                             </p>
                             <p>
                                 <label htmlFor="qty">Quantity:</label>
-                                <input type='number' id='qty' name='qty' placeholder='0' />
+                                <input type='number' id='qty' name='qty' min= '0' max= '99' placeholder='0' />
                             </p>
 
-                            <p>
+                            {/* <p>
                                 <label htmlFor="inStock">In Stock:</label>
                                 <input type='checkbox' id='inStock' name='inStock' />
-                            </p>
+                            </p> */}
 
                             <input type="submit" value="Submit Product"/>
                         </fieldset>
