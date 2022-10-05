@@ -5,7 +5,7 @@ class New extends React.Component {
     render() {
         return (
             <DefaultLayout>
-                <div>
+        
                     <h1>Create New Product</h1>
                     <form action="/products" method="POST">
                         <fieldset>
@@ -36,13 +36,13 @@ class New extends React.Component {
                                 <input type='checkbox' id='inStock' name='inStock' />
                             </p> */}
 
-                            <input type="submit" value="Submit Product"/>
+                            <input className='btn' type="submit" value="Submit Product"/>
                         </fieldset>
                     </form>
                     <nav>
-                        <a href ='/products'>Back</a>
+                        <a className='back'href ='/products'>Back</a>
                     </nav>
-                </div>
+            
             </DefaultLayout>
         )
     }

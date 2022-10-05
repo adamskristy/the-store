@@ -9,29 +9,29 @@ class Show extends React.Component {
 
         return (
             <DefaultLayout title ="">
-                
+                <div className='show-box'>
                     <h1>{`${products.name}`}</h1>
                         <img src={products.image} height='200px' />
                         <p>Description: {products.descr}</p>
-                        <p>{products.price}</p>
+                        <p>${products.price}</p>
                         <p>Qty: {products.qty}</p>
-                        <h4><p>{products.inStock ? " In Stock" : "Out of Stock " }</p></h4>
-                        {products.qty == 0? <button hidden>Buy</button> : <button>Buy</button>}
-
-                    <div>
+                        <p>{products.inStock ? " In Stock" : "Out of Stock " }</p> 
+                        {products.qty == 0 ? <button className='hidden'>Buy</button> : <button>Buy</button>}
+                </div>
+                    <div className='btn-box'>
                         
                         <form action ={`/products/${products._id}/edit`} >
-                            <input type="submit" value="Edit" />
+                            <input className='btn'  type="submit" value="Edit" />
                         </form>
                             
                 
                         <form action ={`/products/${products._id}?_method=DELETE`} method="POST">
-                            <input type="submit" value="Delete Product" />
+                            <input className='btn'  type="submit" value="Delete Product" />
                         </form>
 
 
                     <nav>
-                        <a href ='/products/'>Back</a>
+                        <a className='back' href ='/products/'>Back</a>
                     </nav>
                </div> 
             </DefaultLayout>

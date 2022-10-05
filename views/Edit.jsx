@@ -8,7 +8,7 @@ class Edit extends React.Component {
 
         return (
             <DefaultLayout>
-                <div>
+                
                     <h1>Edit Product</h1>
 
 
@@ -37,15 +37,15 @@ class Edit extends React.Component {
                             </p>
                            
 
-                            <input type="submit" value="Edit Product"/>
+                            <input className='btn'  type="submit" value="Edit Product"/>
 
                         </fieldset>
                     </form>
 
                     <nav>
-                        <a href ={`/products/${products._id}`}>Back</a>
+                        <a className='back' href ={`/products/${products._id}`}>Back</a>
                     </nav>
-                </div>
+                
             </DefaultLayout>
         )
     }
