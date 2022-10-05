@@ -142,6 +142,20 @@ const showOneProduct = (req, res) => {
     })
 }
 
+// ROUTE    PATCH/products/:id      (buy)
+const buyProduct = (req, res) => {
+    Product.findByIdAndUpdate(req.params.id, { $inc: { qty: -1 } }, (err, updatedProduct) => {
+        if (err) {
+            res.status(400).json(err)
+         } else {
+            res.status(200).render('Show', { products: updatedProduct })           
+        
+        }
+
+    })
+}
+
+
 
 module.exports = {
     findAllProducts,
@@ -152,5 +166,6 @@ module.exports = {
     showEditView,
     seedStarterData,
     clearProductData,
-    showOneProduct
+    showOneProduct,
+    buyProduct
 }

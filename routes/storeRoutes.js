@@ -21,11 +21,15 @@ const {
     seedStarterData,
     clearProductData,
     showOneProduct,
+    buyProduct
 } = require('../controllers/storeController')
 
 
 // I.N.D.U.C.E.S
 // Index, New, Delete, Update, Create, Edit, Show
+
+//patch
+router.patch('/:id', buyProduct)
 
 // Setup "index" route
 router.get('/', findAllProducts)
@@ -53,6 +57,9 @@ router.get('/clear', clearProductData)
 
 // Setup "show" route  
 router.get('/:id', showOneProduct)
+
+
+
 
 
 module.exports = router
