@@ -19,7 +19,7 @@ class Index extends React.Component {
                                     <li key={products._id} className='products'>
                                         <img src={products.image} height='200px' />
                                         <p><a href={`/products/${products._id}`}>{products.name}</a> </p>
-                                        <p>{products.inStock ? "In Stock" : "Out of Stock " }</p>
+                                        <p>{products.qty > 0 ? "In Stock" : "Out of Stock " }</p>
                                         <span>${products.price}</span> 
                                     </li>
                                     
