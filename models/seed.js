@@ -12,7 +12,7 @@ const products = [
         name:'Cosmic',
         image: 'https://i.ibb.co/SRhkYMk/cosmic.jpg',
         price:'5.99',
-        descr:'Cosmic bath bomb',
+        descr:'This bright beautiful blue bath bomb with a lemon yellow and pink cotton candy ring adds a nice pop of color. Scented in yummy Black Raspberry Vanilla.',
         qty:'1',
         inStock: true,
     },

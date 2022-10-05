@@ -19,7 +19,7 @@
 }
 
 .flex-container {
-  /* outline: 2px solid purple; */
+  outline: 2px solid purple;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
 }
 
 .index-container{
-  /* outline: 4px solid seagreen; */
+  outline: 4px solid seagreen;
   width: 800px;
   display: flex;
   flex-wrap: wrap;
@@ -37,7 +37,7 @@
 }
 
 .products{
-  /* outline: 2px solid salmon; */
+  outline: 2px solid salmon;
   display: flex;
   flex-direction: column;
   justify-content: center;
