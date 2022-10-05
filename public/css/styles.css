@@ -19,8 +19,7 @@
 }
 
 .flex-container {
-  outline: 2px solid purple;
-  padding: 10px;
+  /* outline: 2px solid purple; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +27,7 @@
 }
 
 .index-container{
-  outline: 4px solid seagreen;
+  /* outline: 4px solid seagreen; */
   width: 800px;
   display: flex;
   flex-wrap: wrap;
@@ -37,7 +36,7 @@
 }
 
 .products{
-  outline: 2px solid salmon;
+  /* outline: 2px solid salmon; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,6 +52,10 @@ li{
 
 body {
   font-family: 'Montserrat', sans-serif;
+}
+
+textarea {
+  font-family: inherit;
 }
 
 h1 {
@@ -74,19 +77,22 @@ a:hover {
   color: #fbbaca;
 }
 
-fieldset {
-  background-color: #fbbaca;
-  padding: 50px;
-  border: none;
-  border-radius: 20px;
-  box-shadow: inset 5px 10px 60px 40px #dea5c6;
-  color: white;
-  font-size: 1.5rem;
+label{
+  display: block;
 }
 
-fieldset p {
-  padding: 10px;
+fieldset {
+  background-color: rgba(251, 186, 202, .55);
+  width: 400px;
+  padding: 10px 30px 20px 30px;
+  border: none;
+  border-radius: 20px;
+  color: #cc71a6;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
+
+
 
 fieldset input {
   font-family: 'Montserrat', sans-serif;
@@ -105,6 +111,12 @@ fieldset input {
   padding-bottom: 30px;
 }
 
+#show-descr{
+  /* outline: 2px solid salmon; */
+  width: 400px;
+  text-align: center;
+}
+
 .btn-box {
   /* outline: 2px solid salmon; */
   display: flex;
@@ -112,6 +124,10 @@ fieldset input {
   gap: 20px;
 }
 
+#show-image {
+  opacity: 0.7;
+  
+}
 
 
 .btn, button {
@@ -186,3 +202,4 @@ button:active {
 .hidden {
   display: none
 }
+

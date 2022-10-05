@@ -16,24 +16,24 @@ class Edit extends React.Component {
                         <fieldset>
                             <p>
                                 <label htmlFor="name">Product Name:</label>
-                                <input type='text' id='name' name='name' defaultValue={products.name} />
+                                <input type='text' id='name' name='name' defaultValue={products.name} size='40' />
                             </p>
 
                             <p>                           
                                 <label htmlFor="image">Product Image:</label>
-                                <input type='text' id='image' name='image' defaultValue={products.image} />
+                                <input type='text' id='image' name='image' defaultValue={products.image} size='40' />
                             </p>
                             <p>
                                 <label htmlFor="price">Price:</label>
-                                <input type='number' step='0.01' id='price' name='price' defaultValue={products.price} />
+                                <input type='number' step='0.01' id='price' name='price'  defaultValue={products.price} size='40'/>
                             </p>
                             <p>
                                 <label htmlFor="descr">Product Description:</label>
-                                <input type='text' id='descr' name='descr' defaultValue={products.descr} />
+                                <textarea id='descr' name='descr' defaultValue={products.descr} rows='5' cols='40'></textarea>
                             </p>
                             <p>
                                 <label htmlFor="qty">Quantity:</label>
-                                <input type='number' id='qty' name='qty' min= '0' max= '99' defaultValue={products.qty} />
+                                <input type='number' id='qty' name='qty' min= '0' max= '99'  defaultValue={products.qty} size='40'/>
                             </p>
                            
 

@@ -12,7 +12,7 @@ class Show extends React.Component {
                 <div className='show-box'>
                     <h1>{`${products.name}`}</h1>
                         <img src={products.image} height='200px' />
-                        <p>Description: {products.descr}</p>
+                        <p id='show-descr'>{products.descr}</p>
                         <p>${products.price}</p>
                         <p>Qty: {products.qty}</p>
                         <p>{products.qty > 0 ? " In Stock" : "Out of Stock " }</p> 
