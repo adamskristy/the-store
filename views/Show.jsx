@@ -19,7 +19,7 @@ class Show extends React.Component {
                         {/* {products.qty == 0 ? <button className='hidden'>Buy</button> : <button>Buy</button>} */}
 
                 <form action={`/products/${products._id}?_method=PATCH`} method="POST">
-                        {products.qty == 0 ? <button className='hidden'>Buy</button> : <button>Buy</button>}
+                        {products.qty > 0 ? <button>Buy</button> : null }
                 </form>
 
                 </div>

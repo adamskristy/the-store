@@ -142,18 +142,40 @@ const showOneProduct = (req, res) => {
     })
 }
 
-// ROUTE    PATCH/products/:id      (buy)
+// ROUTE    PATCH/products/:id      (update)
 const buyProduct = (req, res) => {
+    if(req.body.qty <= 0){
+        req.body.inStock = "off"
+    } else {
+        req.body.inStock = "on"
+    }
+
+    if (req.body.inStock === "on") {
+        req.body.inStock = true
+    } else {
+        req.body.inStock = false
+    }
+
     Product.findByIdAndUpdate(req.params.id, { $inc: { qty: -1 } }, (err, updatedProduct) => {
         if (err) {
             res.status(400).json(err)
          } else {
-            res.status(200).render('Show', { products: updatedProduct })           
+            // res.status(200).render('Show', { products: updatedProduct })       
+            res.status(200).redirect(`/products/${req.params.id}`)    
         
         }
 
     })
 }
+
+// Products.findOneAndUpdate({_id: req.params.id},{$inc : {'qty' : -1}}, (err, updatedProduct) => {
+//     if (err){
+//         res.status(400).json(err)
+//     } else {
+//         res.status(200).redirect(/products/${req.params.id}/purchase)
+//     }
+// })
+
 
 
 
