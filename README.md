@@ -10,7 +10,7 @@ The purpose of this project is to demonstrate knowledge of the MERN stack (Mongo
 
 ## Technologies used
 * MongoDB
-* Express js
+* Express js 
 * React js
 * Node js
 * HTML
