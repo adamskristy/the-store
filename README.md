@@ -1,7 +1,7 @@
 # Sweet Water Bath and Spa Product Site
 
-##### Live Link WIP
-https://wicked-wasp-peplum.cyclic.app
+##### Live Link
+https://sweet-water-bath-store.cyclic.app/products
 
  Mod 2 Project for Per Scholas Codebridge
 
